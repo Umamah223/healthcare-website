@@ -1,0 +1,78 @@
+{% load static%}
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <title>United Healthcare</title>
+    <style>
+        body, html {
+            padding: 0px;
+            margin: 0px;
+        }
+
+        .togglepane {
+            height: 90px;
+            width: 100%;
+            color: white;
+            background-color: darkcyan;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0px;
+        }
+
+        .logo {
+            color: white;
+            font-size: 17px;
+            letter-spacing: 2px;
+            margin-left:25px;
+        }
+
+        .navbar {
+            letter-spacing: 1px;
+            font-size: 17px;
+            display: flex;
+            position:relative;
+        }
+
+        .navbar a:hover {
+            border-bottom: 3px solid white;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            margin: 11px;
+            position: relative;
+        }
+
+        .background_color {
+            background-repeat: no-repeat;
+            background-size: cover;
+            display: flex;
+        }
+
+    </style>
+</head>
+<body>
+    {% comment %} The first div class is for the toggle pane {% endcomment %}
+    <div class="togglepane">
+        <div class="logo">
+            <h2 style="color:white"> UNITED HEALTHCARE</h2>
+        </div>
+        {% comment %} This div element is for the navbar {% endcomment %}
+        <div class="navbar">
+            <a href="/home">Home</a>
+            <a href="/about_us">About Us</a>
+            <a href="/doctors">Doctors</a>
+            <a href="/book_appointment">Book an appointment</a>
+            <a href="/contact_us">Contact Us</a>
+        </div>
+    </div>
+
+    {% comment %} This is the div class for the background image {% endcomment %}
+    <div class="background_color"> 
+    </div>
+
+</body>
+</html>

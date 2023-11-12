@@ -1,0 +1,120 @@
+{% include 'index.html'%}
+{% load static%}
+<html>
+<head>
+<style>
+
+    index.htmlh3{
+        font-family:"Times New Roman", Times, serif;
+    }
+
+    .heading_appointment{
+      text-align:center;
+      color:#0A5656;
+      line-height: 1.42857143;
+      letter-spacing : 0.9px;
+    }
+
+    .row{
+        gap: 2rem;
+        display : flex;
+        text-align : center;
+        align-items : center;
+        height: 100vh;
+        justify-content : space-between;
+    }
+
+    .img {
+        flex: 1.1;
+        margin-right: 16rem;
+        text-align: center;
+        
+    }
+
+     .appointment-form{
+        flex: 1;
+        border : var(--border);
+        box-shadow : 0 0 10px rgba(0,0,0.1);
+        text-align: center;
+        background:#fff;
+        padding : 2rem;
+        border-radius : 5rem;
+        border: 3px solid #1F989E;
+        line-height: 1.42857143;
+        letter-spacing : 0.9px;
+        margin-right: 110px;
+        width: 80%;
+    }
+
+    form .name,
+    form .no,
+    form .date,
+    form .email,
+    form .schedule{
+        border : solid green;
+        margin-bottom : 2rem;
+        display: block;
+    }
+</style>
+</head>
+
+<body>
+  <div class="heading_appointment">
+<h1> Book Your Appointments Now </h1>
+  </div>
+
+{% comment %} One main div class {% endcomment %}
+<div class="row">
+        <div class="img"> 
+           <img class="moving-image" src="{% static "images/Mobile login.gif" %}" alt="images">
+        </div>
+{% comment %} Form elements {% endcomment %}
+        <div class="appointment-form">
+
+          <form action="{% url 'appointment_data' %}" method="POST"> 
+              {% csrf_token %}
+
+                <h3>Book Appointment </h3>
+               
+                 <div class="name">
+                   <input type="text" placeholder="Name" name="form_name" required> 
+                  </div>
+        
+                  <div class="no">
+                    <input type="number" placeholder="Number" name="Name" required>
+                  </div>
+         
+                  <div class="email">
+                    <input type="email" placeholder="kevin123@gmail.com" name="Email" required>
+                  </div>
+        
+                  <div class="date">
+                     <input type="date" placeholder="12/02/23" name="Date" required>
+                  </div>
+            
+                  <div class="schedule">
+                       <select name="choose_schedule">
+                           <option value= "Choose Schedule"> Choose Schedule </option>
+                           <option value= "9 AM to 10 AM"> 9 AM to 10 AM </option>
+                           <option value="10 AM to 11 AM">10 AM to 11 AM </option>
+                           <option value="11 AM to 12 PM"> 11 AM to 12 PM </option>
+                           <option value="1 PM to 2 PM"> 1 PM to 2 PM </option>
+                            <option value="2 PM to 3 PM"> 2 PM to 3 PM</option>
+                         </select>
+                   </div>
+
+            </table>
+                   <button type="submit" class="submit_button"> Submit</button>
+
+            </form>
+        </div>
+</div>
+{% comment %} Div class for row ends {% endcomment %}
+{% include 'footer.html'%}
+</body>
+</html>
+
+
+
+
+

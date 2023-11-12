@@ -1,0 +1,193 @@
+<html>
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+
+  <style>
+    {% comment %} Footer styles {% endcomment %}
+    footer{
+        background : darkcyan;
+        color : white;
+    }
+
+    .main{
+        text-align : left;
+    }
+
+    .footer_links{
+        color : white;
+        text-decoration : none;
+    }
+
+    .footer_logo{
+        margin-top:10px;
+        margin-left :20px;
+    }
+
+{% comment %} Newsletter styles {% endcomment %}
+
+.footer_section .newsletter {
+    flex-wrap:wrap;
+    justify-content: flex-start;
+    align-items :center;
+    display :flex;
+   }
+
+   {% comment %} Newsletter Text styling {% endcomment %}
+   .footer_section .newsletter_text{
+    margin-top: 1px;
+}
+
+    .footer_section .newsletter h2{
+        margin-right :20px;
+        letter-spacing : 1.5px;
+        line-height: 1.42857143;
+        letter-spacing : 0.9px;
+        font-size: 28px;
+        display :flex;
+        flex-direction : column;
+    }
+{% comment %} Email input styles {% endcomment %}
+    .footer_section .email_input_container{
+        display: flex;
+        align-items : center;
+        justify-content: center;
+        border-radius: 5rem;
+        border: 3px solid #1F989E;            
+        box-shadow: 0 0 10px rgba(0, 0, 0.1);
+        background: #fff;
+        padding: 1rem 2rem;
+        }
+
+
+    {% comment %} CSS styles for newsletter heading {% endcomment %}
+    .newsletter_text {
+        margin-left: 120px;
+    }
+
+    .email-input{
+        margin-left: 120px;
+    }
+
+    .footer_section .email-input input {
+        width: 200px; /* Adjust the width of the email input as needed */
+        margin-right: 14px; /* Add some spacing between the input and the button */
+    }
+
+{% comment %} The styles will be applied to all even numbered sections {% endcomment %}
+    .footer_section .newsletter span:nth-child(2){
+        line-height: 1.42857143;
+        letter-spacing : 0.9px;
+        font-size : 17px;
+    }
+
+{% comment %} Footer section for quick links {% endcomment %}
+    .footer_section .footer_links_container{
+        display : grid;
+        grid-template-columns :repeat(auto-fit,minmax(1rem,1fr));
+        padding-right: 22rem !important; 
+    }
+
+    .footer_section .footer_links_container .box h3{
+        font-size: 1.5rem;
+        padding : 1rem 0;
+    }
+
+{% comment %} quick links anchor tag stying {% endcomment %}
+    .footer_section .footer_links_container .box a{
+        display : block;
+        font-size : 1rem;
+        padding: 1rem 0;
+    }
+
+    .footer_section .footer_links_container .box a i{
+        padding-right :.5rem;
+        width : 5%;
+    }
+
+    .footer_section .footer_links_container .box a:hover i{
+        padding-right : 1.1rem;
+    }
+{% comment %} css styling for copyright {% endcomment %}
+    .footer_section .copyright{
+        padding: 0.8rem;
+        padding-top: 1.5rem;
+        margin-top:2rem;
+        text-align : center;
+        font-size:1.2rem;
+        border-top : .1rem solid rgba(0,0,0,0.4);
+    }
+
+  </style>
+</head>
+
+<body>
+     {% comment %} FOOTER SECTION {% endcomment %}
+     <section class="footer_section">
+        <footer>
+  
+           <div class="main">
+            <br>
+            <i class="fa-solid fa-hospital" style="color: #d9dee8; align-items:left; margin-left:10px; vertical-align:middle;"> </i>
+               <h3 class="footer_logo" style="display: inline-block; margin-left:10px;">UNITED HEALTHCARE </h3>
+           </div>
+
+          {% comment %} quick links  {% endcomment %}
+           <div class="footer_links_container" style="padding-left:1rem;">
+               <div class="box">
+                  <h3> Quick Links </h3>
+  
+                  <a class="footer_links" href="/home"> <i class="fa-solid fa-chevron-right" style="color: #f5f9ff;"> </i> Home </a>
+                  <a class="footer_links" href="/about_us"> <i class="fa-solid fa-chevron-right" style="color: #f5f9ff;"> </i> About Us </a>
+                  <a class="footer_links" href="/doctors"> <i class="fa-solid fa-chevron-right" style="color: #f5f9ff;"> </i> Our Doctors </a>
+                  <a class="footer_links" href="/book_appointment"> <i class="fa-solid fa-chevron-right" style="color: #f5f9ff;"> </i> Book Appointment  </a>
+              </div>
+  
+              <div class="box" style="padding-right:1rem;">
+                  <h3> Contact Info </h3>
+  
+                  <a class="footer_links" href="tel:+(0)-123 45 672"> <i class="fa-solid fa-phone" style="color: #e4e7ec;"></i> +(0)-123 456 7890 </a>
+                  <a class="footer_links" href="tel:+(0)-123 45 672"> <i class="fa-solid fa-phone" style="color: #e4e7ec;"></i> +(0)-171 290 999 </a>
+                  <a class="footer_links" href="mailto:acb@gmail.com"> <i class="fas fa-envelope" style="color: #e4e7ec;"></i> unitedhealthcare@gmail.com </a>
+                  <a class="footer_links" href="http://maps.google.com/maps?q=dubai"> <i class="fas fa-map-marker-alt" style="color: #e4e7ec;"></i> Dubai, U.A.E </a>
+  
+              </div>
+  
+              <div class="box">
+                  <h3> Follow Us: </h3>
+  
+                  <a class="footer_links" href="https://www.facebook.com"> <i class="fab fa-facebook"></i> Facebook</a>
+                  <a class="footer_links" href="https://www.twitter.com"> <i class="fab fa-twitter"></i> Twitter</a>
+                  <a class="footer_links" href="https://www.instagram.com"> <i class="fab fa-instagram"></i> Instagram</a>
+                  <a class="footer_links" href="https://www.linkedin.com"> <i class="fab fa-linkedin"></i> LinkedIn</a>
+  
+              </div>
+           </div>
+
+           <br><br>
+
+             {% comment %} Newsletter subscription {% endcomment %}
+        <div class="newsletter">
+            <div class="newsletter_text">
+                <h2>
+                    <span> Subscribe to our Newsletter </span>
+                </h2>
+                <span> Subscribe to know more about our special monthly discount offers </span>
+            </div>
+            <div class="email-input">
+                <form method="POST" action="{% url 'subscribe_to_newsletter' %}">
+                    {% csrf_token %}
+                    <div class="email_input_container">
+                        <input type="email" name="email" placeholder="Enter your email">
+                        <button type="submit"> Submit </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+{% comment %} copyright {% endcomment %}
+<div class="copyright"> 
+    &copy; Created By <span> Umamah Ali </span> | All Rights Reserved 
+</div>
+</footer>
+</section>
+</body>
+</html>

@@ -1,0 +1,168 @@
+{% include 'index.html'%}
+{% load static%}
+<html>
+  <head>
+<style>
+  .container {
+    width: 80%;
+    margin: 50px auto;
+  }
+  body{
+    background: url('{% static "images/pexels-jonathan-borba-13697931.jpg" %}') ;
+    background-size: cover; /* This will cover the entire container */
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-attachment : fixed;
+  }
+
+.contact_box{
+  background: white;
+  display : flex;
+}
+
+.contact_left{
+  flex-basis : 60%;
+  padding : 40px 60px;
+  color:white;
+  background: #0F9298;
+}
+
+
+.contact_right{
+  flex-basis : 80%;
+  padding : 40px;
+}
+
+h1{
+  font-family : 'Poppins';
+}
+
+{% comment %} user input row {% endcomment %}
+.user-input{
+  justify-content : space-between;
+  display : flex;
+  margin-bottom : 20px;
+}
+
+.user-input .user-group{
+  flex-basis : 45%;
+}
+
+input{
+width : 100%;
+border : none;
+outline: none;
+border-bottom : 1px solid #ccc;
+}
+
+textarea{
+  width : 100%;
+  padding : 10px;
+  outline: none;
+  border : 1px solid #ccc;
+  box-sizing : border-box; {% comment %} This is done to ensure the box size is same as the other input fields{% endcomment %}
+}
+
+label{
+  display :block;
+}
+
+{% comment %} Contact form submit button {% endcomment %}
+#contact_submit{
+  border-radius : 30px;
+  margin-top : 20px;
+  outline : none;
+  background :#CBE0E1;
+  color : black;
+}
+
+{% comment %} For the email,phone,loc section in the "Reach Us" Part {% endcomment %}
+.e_links{
+  color : black;
+}
+
+{% comment %} When the user clicks on the email,no. or loc. it creates a line hover {% endcomment %}
+.e_links:hover {
+  text-decoration: underline;
+}
+
+.contact_left p{
+  align-items : center;
+}
+</style>
+</head>
+
+<body> 
+     <div class="container">
+      <h1> Connect with us </h1> 
+      <p> <b> We would love to resolve your queries. Feel free to reach out.</b> </p>
+
+      <div class="contact_box">
+
+        <div class="contact_right">
+          <h3> <u> Send Your Request </h3> </u>
+          {% comment %} Form element {% endcomment %}
+          <form action="/contact_us/" method="POST"> {% csrf_token %}
+         {% comment %} First row {% endcomment %}
+            <div class="user-input">
+
+              <div class="user-group"> 
+                <label> Name </label>
+                <input type="text" name="Name" placeholder="Joe Jonas" required>
+              </div>
+
+              {% comment %} Using the required pattern option to ensure user enters upto 8 numbers {% endcomment %}
+              <div class="user-group">
+                <label> Phone </label>
+                <input type="text" name="Phone" id="phone" placeholder="+971 1234 567" required pattern="[+0-9\s]{12,18}">
+            </div>
+
+            </div>
+{% comment %} Second row {% endcomment %}
+            <div class="user-input">
+
+              <div class="user-group"> 
+                <label> Email</label>
+                <input type="email" name="Email" placeholder="johndoe123@gmail.com" required>
+              </div>
+
+              <div class="user-group"> 
+                <label> Subject </label>
+                <input type="text" name="Subject" placeholder="Inquiry">
+              </div>
+
+            </div>
+          <label> Message </label>
+        <textarea rows="5" name= "Message" placeholder="Your Message" required></textarea>
+          
+{% comment %} Submit Button {% endcomment %}
+        <button type="submit" value="Submit" id="contact_submit">Submit</button>
+      </form>
+        </div>
+     
+{% comment %} Left hand side box elements {% endcomment %}
+        <div class= "contact_left">
+          <h3> <u> Reach Us </h3> </u>
+          <h4> <span> &#9993;</span> Email Us : </h4> 
+            <a class="e_links" href="mailto:acb@gmail.com"> unitedhealthcare@gmail.com </a> 
+          
+          <h4> <span> &#9742;</span> Call: </h4> 
+            <a class="e_links" href="tel:+(0)-123 45 672"> +(0)-123 456 7890  </a> <br>
+            <a class="e_links" href="tel:+(0)-123 45 890"> +(0)-891 091 1230 </a> 
+
+   
+            {% comment %} XML syntax and svg element for location icon {% endcomment %}
+          <h4> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-geo-alt" viewBox="0 0 16 16">
+            <path d="M8 0a8 8 0 0 1 5.657 14.657L8 8.707l-5.657 5.657A8 8 0 1 1 8 0zm0 1a7 7 0 0 0 0 14A7 7 0 0 0 8 1z"/>
+            <path d="M8 3a5 5 0 1 1 0 10A5 5 0 0 1 8 3zm0 1a4 4 0 1 0 0 8A4 4 0 0 0 8 4z"/>
+            </svg> Location :</h4>
+
+          <a class="e_links" href="http://maps.google.com/maps?q=dubai"> Dubai, United Arab Emirates </a> <br> <br>
+          <a class="e_links" href="http://maps.google.com/maps?q=sharjah"> Sharjah, United Arab Emirates </a>
+        </div>
+
+      </div>{% comment %} This div element is for the contact_box{% endcomment %}
+     </div>
+     {% include 'footer.html'%}
+ </body>
+ </html>

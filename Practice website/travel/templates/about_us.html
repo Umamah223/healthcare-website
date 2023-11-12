@@ -1,0 +1,196 @@
+{% include 'index.html'%}
+{% load static%}
+<html>
+<head>
+<style>
+    body{
+        font-size : 17.5px;
+    }
+
+    .about_us_img{
+        width : 100%;
+        height : 445px;
+    }
+
+    h2, h3, h4{
+        line-height: 1.32857143;
+        letter-spacing : 0.9px;
+        color : #0A8988;
+    }
+
+    .description p,  .values .values_descrip{ 
+        line-height: 1.42857143;
+        letter-spacing: 0.9px;
+        margin-left: 24px;
+    }
+    
+    .lines-text{
+        display: flex;
+        align-items: center;
+        margin-left: 20px;
+    }
+
+    .lines{
+        width: 15%;
+        border: 3px solid darkcyan;
+        margin-right: 20px;
+    }
+
+    .values {
+        margin-top: 170px;
+        background-color :  #E8EFEF;
+        height : 30s0px;
+        box-shadow :0 0 2px rgba(0,0,0.1);
+
+    }
+
+    .mission {
+        background-color :  #E8EFEF;
+        height : 275px;
+        box-shadow :0 0 2px rgba(0,0,0.1);
+    }
+
+    .mission_img {
+        width : 35%;
+        height : 260px;
+        border-radius : 100px;
+        float:right;
+        margin-left:40px;
+        margin-top:-206px;
+    }
+
+    .vision_img{
+        width : 35%;
+        height : 240px;
+        border-radius : 100px;
+        float:left;
+        margin-right:40px;
+    }
+
+    .values_img{
+        width : 33%;
+        height : 260px;
+        border-radius : 100px;
+        float:right;
+        margin-left:40px;
+        margin-top:-37px;
+    }
+
+</style>
+</head>
+
+<body>
+    {% comment %} Main Image {% endcomment %}
+<div class="img">
+    <img class="about_us_img" src="{% static "images/Main About Us.jpg" %}">
+</div>
+
+
+{% comment %} Description {% endcomment %}
+<div class="description">
+    <div class="lines-text">
+          <div class="lines"> </div>
+             <h2 style="margin-left:2px"> Providing Exceptional Patient Experience </h2>
+    </div>
+
+    <p> United HealthCare being at the forefront of medical excellence and innovation, positions itself as a premier provider of healthcare services. We are one of the UAE’s most trusted integrated healthcare service provider, having an extensive portfolio of fully serviced hospitals and specialty clinics.
+        <br> <br>
+        We offer an extensive array of services and a wide range of treatment options in every field of modern medicine and healthcare. 
+        It proudly boasts of highly advanced technologies, fully-equipped modern hospital rooms, state-of-the-art facilities, backed by the expertise and reputation of a team of multidisciplinary doctors who possess rich global knowledge.
+        All physicians at United Healthcare are American Board Certified or equivalent ensuring that patients receive an international standard of care in the <b> UAE </b>. 
+    </p>
+
+    <div class="lines-text">
+        <div class="lines"></div>
+           <h2 style="margin-left:2px"> Our Strategy, Philosophy & Vision </h2>
+    </div>
+
+    <div class="lines-text">
+       <h3> Patient Centered Care | Our Philosophy</h3>
+    </div>
+
+    <p> Our approach revolves around prioritizing the well-being of our patients in every aspect of their care. 
+        This entails our medical professionals and support team actively engaging patients in decision-making and treatment planning, 
+        treating them with respect while acknowledging their distinct preferences and individuality. 
+        <br> <br>
+        Furthermore, we are committed to ensuring that our patients are fully informed about their medical condition, the treatment procedures, and self-care requirements. 
+        Our foremost concern is the comfort of our patients, which includes pain management, support with daily tasks, and creating an environment that fosters their overall well-being and recovery.
+    </p>
+
+{% comment %} Mission {% endcomment %}
+
+    <div class="mission">
+         <div class="lines-text">
+              <h2> Our Mission</h2>
+          </div>
+            <p style="margin-right:475px"> United HealthCare is an esteemed healthcare facility with a mission to provide cost-effective, 
+             high-quality healthcare facilities.
+             Our mission also encompasses meeting the expectations and the needs through a very diversed primary, 
+             secondary and teritiary services on the outpatient, inpatient as well as referral basis.
+            </p>
+
+         <div class="img">
+           <img class="mission_img" src="{% static "images/About_Us Mission.jpg"%}"> 
+          </div>
+    </div>
+
+{% comment %} Vision {% endcomment %}
+
+         <div class="vision">
+               <div class="lines-text">
+               <h2 style="text-align:right">Our Vision</h2>
+         </div>
+
+         <div class="img">
+                <img class="vision_img" src="{% static "images/About_Us Vision.jpg"%}">
+         </div>
+
+           <p style="margin-left:405px">Our Vision is to be the leading integrated Healthcare destination operating under American Accredited Standards in the Middle East
+             and to be the network of choice for patients, employees and doctors in the UAE.
+             </p>
+        </div>
+{% comment %} Values {% endcomment %}
+
+    <div class="values">
+        <div class="lines-text">
+            <h2 style="text-align:right">Our Values</h2>
+        </div>
+
+        <div class="img">
+            <img class="values_img" src="{% static "images/Our Values.jpg"%}">
+        </div>
+
+        <div class="values_descrip" style="margin-right:405px">
+            <ol>
+                <li> <strong> TeamWork </strong> : Our healthcare professionals work collaboratively 
+                        as a team to provide comprehensive and effective care for our patients
+                </li>
+
+                <li>  <strong> Community </strong> : We actively engage with the local community, 
+                        partnering with organizations to promote wellness and support the well-being of our neighbors
+                </li>
+
+                <li>  <strong>Collaboration </strong>: fostering partnerships with other healthcare providers and 
+                        organizations to enhance the breadth and depth of care available to our patients
+                </li>
+
+                <li> <strong> Quality Care </strong>: We are dedicated to delivering the highest quality care, 
+                        constantly improving our services to ensure the best outcomes for our patient.
+                </li>
+               
+                <li>  <strong> Safety  </strong>: Prioritizing patient safety by maintaining rigorous safety protocols, 
+                        infection control measures, and error prevention systems
+                </li>
+            </ol>
+        </div>
+    </div>
+</div>
+{% include 'footer.html'%}
+</body>
+</html>
+
+
+
+
+
+

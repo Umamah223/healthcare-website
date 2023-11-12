@@ -1,0 +1,387 @@
+{% include 'index.html' %}
+{% load static %}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+<html>
+
+
+<style>
+    .pic{
+        width: 100%;
+        height: 690px;
+        background-size :cover;
+        margin:0;
+        padding:0;
+    }
+    
+    {% comment %} stlying for the description {% endcomment %}
+    .description, .box_services_exp{
+        padding:20px;
+        margin-bottom:0;
+        text-align : center; 
+        letter-spacing : 0.9px;
+        text-indent : 4px;
+        line-height: 1.42857143;
+    }
+
+    .description h1{
+        margin-top :0;
+    }
+
+    .services{
+        display: inline-block;
+        margin : 9px;
+        border: 1px solid #ccc;
+        border-radius: 12px;
+        padding: 20px; {% comment %} padding to separate text from the border  {% endcomment %}
+        width: 20%; 
+        text-align: center; 
+        background-color: #46BBBB;
+    }
+
+    .services i {
+        color : black;
+        font-size: 36px; 
+        display: block; 
+        margin: 0 auto 10px; {% comment %} centering the icon and adding space {% endcomment %}
+    }
+
+      {% comment %} Every odd section would be having thid background colour {% endcomment %}
+      section:nth-child(odd){
+        background : #f5f5f5;
+    }
+
+    {% comment %} For the counter section {% endcomment %}
+     .box_services_exp{
+        box-shadow : 0 0 10px rgba(0,0,0.1);
+    }
+
+    {% comment %} Css styles for icons {% endcomment %}
+    .icons_container{
+        display: grid;
+        gap : 5rem;
+        grid-template-columns : repeat(auto-fit,minmax(15rem,1fr)); {% comment %} specifies the columns in a grid {% endcomment %}
+        padding-top : 4rem;
+        padding-bottom : 4rem;
+    }
+
+    .icons_container .icons{
+        border: 3.5px solid #51ACAC;
+        border-radius :100px;
+        text-align :center;
+        padding : 15px;
+        box-shadow : var(--box-shadow);
+    }
+
+    .icons_container i{
+        font-size: 34px; 
+        display: block; 
+        margin: 0 auto 10px;
+    }
+
+    .icons_container h3{
+        font-size : 27px;
+    }
+
+    .icons_container p{
+        text-shadow : var(--text-shadow);
+        font-size : 18px;
+        line-height: 1.42857143;
+        letter-spacing : 0.9px;
+    }
+
+    {% comment %} About us section on the webpage {% endcomment %}
+
+    .about_image img{
+    height : 439px;
+    width : 57%;
+    float : right;
+    position : relative;
+    }
+
+    .about_info_box {
+        position : absolute;
+        padding :21px;
+        width : 43%;
+        background-color :  #f5f5f5;
+        box-shadow : 0 0 10px rgba(0,0,0.1);
+        border: 4px solid #4CA9A8;
+        line-height: 1.42857143;
+        letter-spacing : 0.9px;
+    }
+
+    .heading_about_us{
+        background : darkcyan;
+        color : white;
+        width : 14%;
+    }
+
+    {% comment %} CSS for the FAQ section {% endcomment %}
+    .main_faq{
+        margin-top: 440px;
+        line-height: 1.42857143;
+        letter-spacing : 0.9px;
+    }
+
+    .faq_container{
+        max-width:75%;
+        margin:auto;
+    }
+
+     .main_faq .heading_faq{
+        line-height: 1.42857143;
+        letter-spacing : 0.9px;
+        text-align:center;
+    }
+
+    .faq .accordion{
+        line-height: 1.42857143;
+        letter-spacing : 0.9px;
+        background-color: darkcyan;
+        color: white;
+        font-size :1.2 rem;
+        width : 100%;
+        padding : 1rem 2.2rem;
+        transition : 0.4s;
+        display :flex;
+        justify-content:space-between;
+        align-items :center;
+        font-weight :bold;
+        border :none;
+        outline :none;
+    }
+
+    .accordion .i{
+        font-size :1.6rem;
+    }
+
+    .active , .accordion:hover{
+        background-color: grey;
+    }
+
+   .faq .panel .p{
+        color : rgba(0,0,0,0.7);
+        font-size:1rem;
+        text-align :center;
+    }
+
+    .faq .panel{
+        padding : 0.1rem 0rem 1rem;
+        text-align:center;
+        overflow:hidden;
+        display :none;
+    }
+
+    .faq{
+        border: 1px solid rgba(0,0,0,0.7);
+        margin :1px 0;
+    }
+
+
+</style>
+
+<body>
+
+    {% comment %} Div class for the image {% endcomment %}
+    <div>
+     <img class="pic" src="{% static 'images/Blue Simple Medical Clinic Presentation.jpg' %}">
+    </div>
+
+    {% comment %} Div class for the description box {% endcomment %}
+    <div class="description">
+        <h1> WHY UNITED HEALTHCARE? </h1>
+        <p>
+              United Healthcare is the largest private hospital in the <b> United Arab Emirates </b> . Our hospital is renowned for its <b>JCI Accreditation</b> and unwavering commitment to excellence in healthcare. 
+              We take pride in offering the most trusted and cutting-edge medical services, including:
+            
+        
+                {% comment %} Div class for service1 {% endcomment %}
+            <div class="services">
+                <i class="fas fa-user-md"></i> 
+                 <b> Experienced and Skilled Team  </b> <br>
+            </div>
+
+           {% comment %} Div class for service2 {% endcomment %}
+            <div class="services">
+                <i class="fas fa-hospital"></i> 
+                <b> Medical and Surgical Expertise </b> <br>
+            </div>
+
+             {% comment %} Div class for service3 {% endcomment %}
+            <div class="services">
+                <i class="fas fa-medkit"></i> 
+                <b> Emergency Services 24/7 </b> <br>
+            </div>
+        </p>
+    </div>
+
+    {% comment %} Section to create counter like effect {% endcomment %}
+    <section id="counter-section">
+        {% comment %} div class inside the section {% endcomment %}
+        <div class="box_services_exp">
+            <h1> OUR HEALTHCARE </h1>
+            <p>
+                The facility offers an extensive range of services covering a wide spectrum of contemporary medical and healthcare fields. 
+                It stands out for its utilization of advanced technologies, state-of-the-art hospital accommodations, comprehensive facilities, artificial intelligence systems, and software resources. 
+                These exceptional attributes are complemented by a team of diverse, highly skilled doctors who bring both regional and global expertise, enhancing the facility's esteemed standing in the field of healthcare.
+            </p>
+        </div>
+    </section>
+
+
+    {% comment %} Section starts for icons {% endcomment %}
+    <section class="icons_container">
+        <div class="icons">
+            <i class="fas fa-user-md"> </i>
+             <h3>100+</h3>
+             <p> Skilled Doctors </p>
+        </div>
+
+        <div class="icons">
+            <i class="fas fa-users"> </i>
+             <h3>2000+</h3>
+             <p> Satisfied Patients </p>
+        </div>
+
+        <div class="icons">
+            <i class="fas fa-procedures"> </i>
+             <h3>250+</h3>
+             <p> Bed Facilities </p>
+        </div>
+
+        <div class="icons">
+            <i class="fa fa-wheelchair"> </i>
+             <h3>15+ </h3>
+             <p> Facilities </p> 
+        </div>
+    
+    </section>
+
+<br>
+{% comment %} Another Section for About Us content {% endcomment %}
+<section class="main_about_us">
+
+    <div class="about_image">
+        <img src="{% static 'images/pexels-jonathan-borba-3279196.jpg' %}" alt="About Us Image">
+    </div>
+
+     <div class="about_info_box">
+        <div class="heading_about_us"> About Us </div>
+        <h2> Providing Exceptional Patient Experience </h2>
+        <p> Providing World-Class care to our patients with the help of our renowned healthcare professionals. We are committed to staying at the forefront of medical advancements. 
+            We embrace innovation, research, and continuous learning to provide the best possible treatments and outcomes for our patients. 
+
+            <div class="abous_us_icons">
+               <i class="far fa-check-square"></i> <b> 100% Patient-centered care and Comfort </b>
+            </div>
+
+            <div class="about_us_icons">
+                <i class="far fa-check-square"></i>  
+                 <b> Expansion for Excellence Around GCC </b>
+             </div>
+
+             <div class="about_us_icons">
+                <i class="far fa-check-square"></i>  
+                 <b> Community Community Offering Health Awareness</b>
+             </div>
+
+             <br> <br>
+            Know More About Our Vision, Missions and Strategies 
+            <button class="know_more"> <a href="{% url 'about_us' %}"> Know More </a> </button> </p>
+    </div>
+    {% comment %} Section for About Us ends here {% endcomment %}
+</section>
+
+
+<br><br>
+{% comment %} Section for FAQ Starts here {% endcomment %}
+<section class="main_faq">
+{% comment %} FAQ Section {% endcomment %}
+<div class="faq_container">
+    <div class="heading_faq"> <h1>FREQUENTLY ASKED QUESTIONS (FAQ's) </h1></div>
+
+    {% comment %} First FAQ {% endcomment %}
+    <div class="faq">
+        <button class="accordion">
+           1. How do I register an Appointment?
+            <i class="fa-solid fa-chevron-down"> </i>
+        </button>
+        <div class="panel">
+            <p> To register an appointment, visit our website's "Book An Appointment" page or call on our hospital listed numbers : <br>
+                +(0)123 4567 890 and (+0)8127 238 090 </p>
+        </div>
+    </div>
+    <br>
+
+    {% comment %} 2nd FAQ {% endcomment %}
+    <div class="faq">
+        <button class="accordion">
+           2. How do I reschedule or cancel my Appointment?
+            <i class="fa-solid fa-chevron-down"> </i>
+        </button>
+        <div class="panel">
+            <p> To cancel or reshcedule an appointment, visit our website's contact us page or call on our hospital listed numbers: <br> +(0)123 4567 890 
+                and (+0)8127 238 090 </p>
+        </div>
+    </div>
+
+    <br>
+
+    {% comment %} 3rd FAQ {% endcomment %}
+    <div class="faq">
+        <button class="accordion">
+           3. What is your Hospital Policy?
+            <i class="fa-solid fa-chevron-down"> </i>
+        </button>
+        <div class="panel">
+            <p> Patients would have to sign our hospital policy when they first become patients at United HealthCare 
+                </p>
+        </div>
+    </div>
+
+    <br>
+    {% comment %} 4th FAQ {% endcomment %}
+
+    <div class="faq">
+        <button class="accordion">
+           4. How do I recommend a Doctor?
+            <i class="fa-solid fa-chevron-down"> </i>
+        </button>
+        <div class="panel">
+            <p> You can recommend one of our doctors on various attributes that are important for you as a patient 
+                 e.g medical expertise,ability to listen & gives enough time, compassion etc. </p>
+        </div>
+    </div>
+
+    <br>
+    {% comment %} 5th FAQ {% endcomment %}
+    <div class="faq">
+        <button class="accordion">
+           5. What should I expect from primary care at United HealthCare?
+            <i class="fa-solid fa-chevron-down"> </i>
+        </button>
+        <div class="panel">
+            <p> We mainly focus on making wellness our foremost priority and collaborating to provide 
+                a comprehensive care for our patients. We also make sure to have a secure repository for all 
+                your medical information. </p>
+        </div>
+    </div>
+</div>
+{% comment %} The FAQ section ends here {% endcomment %}
+</section>
+
+<script>
+    var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        this.nextElementSibling.style.display = (this.nextElementSibling.style.display === "block") ? "none" : "block";
+    });
+}
+</script>
+<br>
+
+{% include 'footer.html'%}
+</body>
+</html>

@@ -1,0 +1,192 @@
+{% include 'index.html'%}
+{% load static%}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+<html>
+<head>
+ <style>
+    .doctors_img{
+        width :100%;
+        height:550px;
+    }
+ 
+    .doctor-box {
+        width: 500px; 
+        height: 205px; 
+        padding: 10px;
+        text-align: center;
+        margin: 10px;
+        display: inline-block;
+        border: 2px solid #C2DCDC; 
+    }
+
+    .doctors-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-left:40px;
+    }
+
+    .round-image {
+        border-radius: 50%;
+        width: 190px; /* Adjust image width */
+        height: 175px; /* Adjust image height */
+        float:left;
+        margin-left:14px;
+        margin-top:17px;
+    }
+
+    .doctor-info {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        line-height: 1.42857143;
+        letter-spacing : 0.9px;
+    }
+
+    h4 {
+        margin: 0;
+    }
+    
+    p {
+        margin: 0;
+    }
+    
+    </style>
+</head>
+
+<body>
+        <img class="doctors_img" src="{% static "images/our doctors 2.jpg"%}">
+
+        <br> <br>
+    <div class="doctors-container">
+    {% comment %} Doctor class  {% endcomment %}
+
+    <div class="doctor-box">
+        <img class="round-image" src="{% static "images/doctor 1.jpg"%}">
+         <div class="doctor-info">
+          <h3>Dr. Alina Starkov </h3>
+          <h4> Languages </h4>
+          <p> English, Irish</p>
+          <h4>Speciality</h4> 
+          <p>General Surgery</p>
+          <h4>Affiliated Hospitals</h4>
+          <p>Central Valley Clinic</p>
+    </div>
+</div>
+    <br><br>
+
+     {% comment %} 2rd Doctor {% endcomment %}
+     <div class="doctor-box">
+        <img class="round-image" src="{% static "images/doctor shaunn.jpg" %}">
+             <div class="doctor-info">
+              <h3>Dr. Shaun Murphy</h3>
+              <h4> Languages</h4>
+              <p> English, Scottish, German</p>
+               <h4>Speciality </h4> 
+               <p>Consultant Pedriatics</p>
+               <h4>Affiliated hospitals </h4>
+               <p>Greenfield Clinic</p>
+              </div>
+         </div>
+         <br><br>
+
+         {% comment %} 3rd Doctor {% endcomment %} 
+    <div class="doctor-box">
+        <img class="round-image" src="{% static "images/doctor 3.jpg" %}">
+        <div class="doctor-info">
+        <h3>Dr. Melendez </h3>
+        <h4> Languages</h4>
+        <p> English, Mexican</p>
+        <h4>Speciality </h4> 
+        <p> Specialist ENT </p>
+        <h4>Affiliated hospitals </h4>
+        <p>Riverside General Hospital</p>
+    </div>
+</div>
+<br><br>
+ 
+
+    {% comment %} 4th Doctor {% endcomment %}
+    <div class="doctor-box">
+            <img class="round-image" src="{% static "images/doctor 4.jpg" %}">
+            <div class="doctor-info">
+            <h3>Dr. Mike Thomas </h3>
+            <h4>Languages</h4>
+            <p>English, French, German </p>
+            <h4>Speciality </h4> 
+            <p>Specialist Cardiologist</p>
+            <h4>Affiliated Hospitals </h4>
+            <p> St. John's Medical Center</p>
+    </div>
+</div>
+    <br><br>
+
+
+{% comment %} 5th Doctor {% endcomment %}
+    <div class="doctor-box">
+            <img class="round-image" src="{% static "images/doctor claire (2).jpg" %}">
+            <div class="doctor-info">
+            <h3>Dr. Megan Roznick </h3>
+            <h4> Languages</h4>
+            <p> English, Irish</p>
+            <h4>Speciality </h4> 
+            <p>Consultant Gastroentologist</p>
+            <h4>Affiliated hospitals </h4>
+            <p>Mercy General Hospital</p>
+            </div>
+        </div>
+
+        <br><br>
+
+{% comment %} 6th Doctor {% endcomment %}
+        <div class="doctor-box">
+            <img class="round-image" src="{% static "images/doctor 6.jpg" %}">
+            <div class="doctor-info">
+            <h3>Dr. Kevin Benton </h3>
+            <h4> Languages</h4>
+            <p> English, Scottish</p>
+            <h4>Speciality </h4> 
+            <p> General Practioner</p>
+            <h4>Affiliated hospitals </h4>
+            <p>Harborview Medical Center </p>
+        </div>
+    </div>
+    <br><br>
+
+{% comment %} 7th Doctor {% endcomment %} 
+    <div class="doctor-box">
+            <img class="round-image" src="{% static "images/doctor 7.jpg" %}">
+            <div class="doctor-info">
+            <h3>Dr. Jake Matthew </h3>
+            <h4> Languages</h4>
+            <p> English, German </p>
+            <h4>Speciality </h4> 
+            <p> Consultant Neonatology</p>
+            <h4>Affiliated hospitals </h4>
+            <p>Central Valley Clinic</p>
+        </div>
+    </div>
+    <br><br>
+
+
+{% comment %} 8th Doctor {% endcomment %} 
+    <div class="doctor-box">
+            <img class="round-image" src="{% static "images/doctor 8.jpg" %}">
+            <div class="doctor-info">
+            <h3>Dr. Claire Brown </h3>
+            <h4> Languages</h4>
+            <p> English </p>
+            <h4>Speciality </h4> 
+            <p> Specialist Emergency Medicine </p>
+            <h4>Affiliated hospitals </h4>
+            <p>Westside Children's Hospital</p>
+        </div>
+    </div>
+
+</div>
+    <br><br>
+
+
+    {% include 'footer.html'%}
+</body>
+</html>
